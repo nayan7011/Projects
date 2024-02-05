@@ -48,5 +48,141 @@ nav button{
     width: 10px;
     margin-left: 10px;
 }
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.header-content h1{
+    font-size: 59px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 700px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-signup{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
 
+/* ------------------------features--------------------- */
 
+.features{
+    padding: 50px 6%;
+    font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+     /* flex-wrap: wrap; */
+    padding: 20px 5px;
+    margin-bottom: 50px;
+}
+.text-col{
+    flex-basis: 58%;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+.img_col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+
+}
+.img_col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+    
+}
+.features h2{
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    
+}
+.features p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* -----------FAQ---------------- */
+.faq{
+    padding: 10px 12%;
+    font-size: 18px;
+    text-align: center;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px ;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
